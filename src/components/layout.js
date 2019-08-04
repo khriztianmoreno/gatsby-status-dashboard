@@ -1,49 +1,47 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Global, css } from '@emotion/core'
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import Footer from './Footer'
 
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+const Layout = ({ children }) => (
+  <>
+    <Global
+      styles={css`
+        *::before,
+        *::after {
+          box-sizing: border-box;
         }
-      }
-    }
-  `)
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
+        ::selection {
+          color: #fff;
+          background-color: #3490dc;
+        }
+        body {
+          border: 0;
+          margin: 0;
+          padding: 0;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+            "Helvetica Neue", sans-serif;
+          font-size: 18px;
+          color: #24242d;
+          background: #f0f2fd;
+        }
+      `}
+    />
+    <div>
+      <main
+        css={css`
+          max-width: 60rem;
+          margin: 0 auto;
+          padding: 2rem;
+      `}
       >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
-}
+        {children}
+      </main>
+      <Footer />
+    </div>
+  </>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,11 +1,16 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Status Dashboard - @khriztianmoreno`,
+    description: `Showing the statuses of my Netlify deploys & CircleCI tests.`,
+    author: `@khriztianmoreno`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,8 +32,26 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-theme-ui`,
+    {
+      resolve: `gatsby-source-netlify`,
+      options: {
+        apiKey: process.env.NETLIFY_ACCESS_KEY,
+        opts: {
+          userAgent: "netlify/js-client",
+          scheme: "https",
+          host: "api.netlify.com",
+          pathPrefix: "/api/v1",
+          globalParams: {}
+        }
+      },
+    },
+    {
+      resolve: `gatsby-source-circleci`,
+      options: {
+        apiKey: process.env.CIRCLECI_KEY,
+      },
+    },
   ],
 }
