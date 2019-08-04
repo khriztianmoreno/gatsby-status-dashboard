@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a06fd3ad-81c3-40d7-bc81-142cf953daa3/deploy-status)](https://app.netlify.com/sites/status-dashboard-gatsby/deploys)
 <p align="center">
   <a href="https://khriztianmoreno.dev">
     <img alt="Gatsby Status" src="./.readme-static/gatsby-site-illustration.png" />
@@ -19,7 +20,7 @@
 
 Showing the statuses of Netlify deploys & CircleCI projects. Made with [gatsby-source-netlify](https://www.gatsbyjs.org/packages/gatsby-source-netlify/) and [gatsby-source-circleci](https://www.gatsbyjs.org/packages/gatsby-source-circleci/).
 
-[**Demo Website**](https://k.dev)
+[**Demo Website**](https://status-dashboard-gatsby.netlify.com/)
 
 ## 🚀 Getting Started
 
