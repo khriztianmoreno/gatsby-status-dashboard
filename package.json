@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "Cristian Moreno <khriztianmoreno@gmail.com>",
   "dependencies": {
-    "@emotion/core": "10.0.20",
+    "@emotion/core": "10.0.21",
     "@emotion/styled": "10.0.17",
     "@mdx-js/react": "1.5.0",
     "@theme-ui/presets": "0.2.42",
