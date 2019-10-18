@@ -8,7 +8,7 @@
     "@emotion/styled": "10.0.17",
     "@mdx-js/react": "1.5.1",
     "@theme-ui/presets": "0.2.44",
-    "gatsby": "2.16.4",
+    "gatsby": "2.16.5",
     "gatsby-image": "2.2.29",
     "gatsby-plugin-emotion": "4.1.12",
     "gatsby-plugin-manifest": "2.2.23",
