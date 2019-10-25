@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "author": "Cristian Moreno <khriztianmoreno@gmail.com>",
   "dependencies": {
-    "@emotion/core": "10.0.21",
-    "@emotion/styled": "10.0.17",
+    "@emotion/core": "10.0.22",
+    "@emotion/styled": "10.0.22",
     "@mdx-js/react": "1.5.1",
     "@theme-ui/presets": "0.2.44",
     "gatsby": "2.17.4",
